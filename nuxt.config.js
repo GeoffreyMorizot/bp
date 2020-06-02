@@ -1,7 +1,6 @@
 export default {
   env: {
-    // eslint-disable-next-line prettier/prettier
-    strapiBaseUri: process.env.API_URL || "http://localhost:1337"
+    strapiBaseUri: process.env.API_URL || 'http://localhost:1337'
   },
   mode: 'universal',
   /*
