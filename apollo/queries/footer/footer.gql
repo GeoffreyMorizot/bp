@@ -1,0 +1,17 @@
+query Footer {
+  footer{
+    content1
+    Socials{
+      ... on ComponentDefaultSocials{
+        socials{
+          link
+          icon{
+            name
+            url
+          }
+        }
+      }
+    }
+  }
+}
+

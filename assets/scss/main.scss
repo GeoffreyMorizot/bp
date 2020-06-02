@@ -1,0 +1,214 @@
+
+/*----------- FUNCTION -------------*/
+$space: 8px !default;
+$space-aliases: () !default;
+
+// Compute spacing value
+// space(1) => $space
+// space(2, 1rem) => 2rem
+
+@function space($multiple: 1, $space: $space) {
+  @if map-has-key($space-aliases, $multiple) {
+    $multiple: map-get($space-aliases, $multiple);
+  }
+
+  @return $multiple * $space;
+}
+/*--------- VARIABLES -------------*/
+:root {
+  --primary-color: rgba(46, 46, 46, 1);
+  --primary-color-light: rgba(147, 147, 147, 1);
+  --secondary-color: rgba(233, 196, 4, 1);
+  --secondary-color-light: rgba(255, 243, 211, 1);
+
+  --body-margin: 104px;
+  --body-margin-mobile: 40px;
+}
+/* --------- MEDIA QUERIES ---------- */
+
+
+$screen-tablet : 1024px;
+$screen-mobile : 767px;
+
+@mixin tablet {
+  @media (max-width: #{$screen-tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$screen-mobile}) {
+    @content;
+  }
+}
+
+/*--------- BASE -------------*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+label,
+li {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 300;
+
+}
+
+h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 120px;
+  line-height: 150%;
+  text-transform: uppercase;
+  @include mobile {
+    font-size: 70px;
+  }
+}
+h2 {
+font-family: 'Rubik', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 55px;
+line-height: 150%;
+@include mobile {
+  font-size: 35px;
+}
+}
+
+h3 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 27px;
+}
+
+h5 {
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  @include mobile {
+    font-size: 12px;
+  }
+}
+
+p {
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--primary-color-light);
+  @include mobile {
+    font-size: 15px;
+  }
+}
+
+pre {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  white-space: pre-line;
+}
+
+.quote {
+  font-family: 'Rubik', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+
+input[type="submit"],
+.btn {
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 16px 32px;
+  border: none;
+  transition: all 0.1s ease-in;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    filter: brightness(90%);
+    transition: all 0.3s ease-in;
+  }
+}
+
+.btn--primary {
+  text-align: center;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.btn--inline {
+  padding: 0;
+  text-align: start;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+
+  background-color: transparent;
+  color: var(--secondary-color);
+}
+
+textarea {
+  resize: none;
+
+  &:focus {
+    min-height: 150px;
+  }
+}
+
+
+

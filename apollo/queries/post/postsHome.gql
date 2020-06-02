@@ -1,0 +1,15 @@
+query PostsHome {
+  posts(where: {published: "true"}){
+    id
+    type
+    slug
+    thumbnail{
+      url
+      alternativeText
+    }
+    logo{
+      url
+      alternativeText
+    }
+  }
+}

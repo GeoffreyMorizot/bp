@@ -1,0 +1,14 @@
+query About {
+  about {
+    id
+    title
+    description
+    vision
+    picture {
+      url
+    }
+    awards{
+      url
+    }
+  }
+}

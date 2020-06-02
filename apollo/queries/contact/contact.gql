@@ -1,0 +1,10 @@
+query Contact {
+  contact{
+      id
+    title
+    email
+    location
+    created_at
+  }
+
+}

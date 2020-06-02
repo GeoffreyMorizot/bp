@@ -1,0 +1,11 @@
+query Socials{
+      socials{
+        id
+    link
+    name
+    icon{
+      url
+      
+    }
+  }
+}

@@ -1,0 +1,17 @@
+query Slugs{
+    about{
+        id
+        slug
+        title
+    }
+    contact{
+        id
+        slug
+        title
+    }
+    film{
+      id
+    slug
+    title
+   }
+}
