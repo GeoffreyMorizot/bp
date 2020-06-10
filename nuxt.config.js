@@ -1,6 +1,9 @@
 export default {
   env: {
-    strapiBaseUri: process.env.API_URL || 'http://localhost:1337'
+    strapiBaseUri:
+      process.env.NODE_ENV === 'dev'
+        ? 'http://localhost:1337'
+        : 'https://basile-p.herokuapp.com'
   },
   mode: 'universal',
   /*
@@ -74,7 +77,9 @@ export default {
       default: {
         // eslint-disable-next-line prettier/prettier
         httpEndpoint:
-          process.env.BACKEND_URL || "http://localhost:1337/graphql"
+          process.env.NODE_ENV === 'dev'
+            ? 'http://localhost:1337/graphql'
+            : 'https://basile-p.herokuapp.com/graphql'
       }
     }
   },

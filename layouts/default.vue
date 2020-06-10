@@ -3,14 +3,15 @@
     <nav ref="navigation" class="navigation">
       <nuxt-link to="/" class="navigation__logo">logo</nuxt-link>
       <ul class="navigation__links">
-        <nuxt-link
+        <li
           v-for="(slug, index) in slugs"
           :key="index"
           class="navigation__link"
-          :to="slug.slug"
         >
-          {{ slug.title }}
-        </nuxt-link>
+          <nuxt-link :to="slug.slug">
+            {{ slug.title }}
+          </nuxt-link>
+        </li>
       </ul>
       <div class="navigation__mobile" @click="toggleMenu">
         <div class="navigation__mobile--line"></div>
@@ -141,6 +142,8 @@ p {
 .navigation__links {
   @include mobile {
     display: none;
+    display: flex;
+    flex-direction: row;
   }
 }
 .navigation__link {
