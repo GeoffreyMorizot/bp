@@ -3,7 +3,7 @@ export default {
     strapiBaseUri:
       process.env.NODE_ENV === 'dev'
         ? 'http://localhost:1337'
-        : 'https://basile-p.herokuapp.com'
+        : 'https://basile-p2.herokuapp.com'
   },
   mode: 'universal',
   /*
@@ -79,7 +79,7 @@ export default {
         httpEndpoint:
           process.env.NODE_ENV === 'dev'
             ? 'http://localhost:1337/graphql'
-            : 'https://basile-p.herokuapp.com/graphql'
+            : 'https://basile-p2.herokuapp.com/graphql'
       }
     }
   },
