@@ -1,5 +1,5 @@
 query PostsHome {
-  posts(where: {published: "true"}){
+  posts(where: {Published: "true"}){
     id
     type
     slug
