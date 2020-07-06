@@ -58,15 +58,16 @@ export default {
   data() {
     return {
       contact: [],
-      socials: [],
-      api_url: process.env.strapiBaseUri
+      socials: []
     }
   },
   apollo: {
     contact: {
+      prefetch: true,
       query: contactQuery
     },
     socials: {
+      prefetch: true,
       query: socialQuery
     }
   }

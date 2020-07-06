@@ -41,9 +41,8 @@
       <div class="about__awards">
         <h2>AWARDS</h2>
 
-        <div v-if="$apollo.loading == 0">
-          <img :src="`${about.awards.url}`" alt="" />
-        </div>
+        <img :src="`${about.awards.url}`" alt="" />
+
         <div class="bg"></div>
       </div>
     </section>
@@ -55,8 +54,7 @@ import aboutQuery from '~/apollo/queries/about/about'
 export default {
   data() {
     return {
-      about: [],
-      api_url: process.env.strapiBaseUri
+      about: []
     }
   },
   apollo: {
