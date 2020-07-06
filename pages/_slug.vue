@@ -32,7 +32,7 @@
             v-for="(director, index) in post.posts[0].directors"
             :key="index"
           >
-            {{ director.name }}
+            {{ director.Name }}
           </span>
         </li>
         <li>Cinematographer: {{ post.posts[0].cinematographer }}</li>

@@ -13,7 +13,7 @@ query Post($slug: String!) {
       name
     }
     directors {
-      name
+      Name
     }
     gallery {
       Picture {
