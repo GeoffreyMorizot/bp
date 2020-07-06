@@ -40,10 +40,7 @@
     <section class="awards">
       <div class="about__awards">
         <h2>AWARDS</h2>
-
-        <img :src="`${about.awards.url}`" alt="" />
-
-        <div class="bg"></div>
+        <img :src="`${about.awards[0].url}`" alt="" />
       </div>
     </section>
   </div>
