@@ -5,9 +5,6 @@ query Post($slug: String!) {
     type
     url
     description
-    directors {
-      name
-    }
     Cinematographer
     productions {
       name
