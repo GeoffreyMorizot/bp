@@ -46,9 +46,8 @@
           :href="social.link"
         >
           <img
-            v-if="social.icon === undefined"
-            :src="`http://localhost:1337${social.icon.url}`"
-            :alt="social.icon.name"
+            :src="`${social.Icon.url}`"
+            :alt="social.name"
             class="footer__icon"
           />
         </a>

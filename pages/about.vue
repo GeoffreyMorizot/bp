@@ -3,11 +3,7 @@
     <section class="about">
       <h1 class="about__title">{{ about.title }}</h1>
       <div v-if="$apollo.loading == 0" class="about__picture">
-        <img
-          v-if="about.picture === undefined"
-          :src="`${api_url}${about.picture.url}`"
-          alt=""
-        />
+        <img :src="`${about.picture.url}`" alt="" />
       </div>
       <div class="about__description">
         <p>{{ about.description }}</p>
@@ -44,11 +40,7 @@
     <section class="awards">
       <div class="about__awards">
         <h2>AWARDS</h2>
-        <img
-          v-if="about.picture === undefined"
-          :src="`${api_url}${about.awards.url}`"
-          alt=""
-        />
+        <img :src="`${about.awards.url}`" alt="" />
         <div class="bg"></div>
       </div>
     </section>

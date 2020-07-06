@@ -1,14 +1,14 @@
 query Post($slug: String!) {
   posts(where: {slug: $slug}) {
     id
-    title
+    Title
     type
     url
     description
     directors {
       name
     }
-    cinematographer
+    Cinematographer
     productions {
       name
     }
@@ -16,7 +16,7 @@ query Post($slug: String!) {
       name
     }
     gallery {
-      picture {
+      Picture {
         id
         url
       }

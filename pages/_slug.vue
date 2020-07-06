@@ -5,11 +5,11 @@
     </div>
     <div class="post__gallery">
       <div
-        v-for="(img, index) in post.posts[0].gallery.picture"
+        v-for="(img, index) in post.posts[0].gallery.Picture"
         :key="index"
         class="image__wrapper"
       >
-        <img :data-id="img.id" :src="`${api_url}${img.url}`" alt="" srcset="" />
+        <img :data-id="img.id" :src="`${img.url}`" alt="" srcset="" />
       </div>
     </div>
     <div class="post__description">
@@ -51,11 +51,11 @@
     </div>
     <agile :dots="false">
       <div
-        v-for="(img, index) in post.posts[0].gallery.picture"
+        v-for="(img, index) in post.posts[0].gallery.Picture"
         :key="index"
         class="slide"
       >
-        <img :data-id="index" :src="`${api_url}${img.url}`" alt="" srcset="" />
+        <img :data-id="index" :src="`${img.url}`" alt="" srcset="" />
       </div>
     </agile>
   </article>

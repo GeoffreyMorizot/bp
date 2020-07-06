@@ -3,7 +3,7 @@
     <div class="article__img--blur">
       <img
         class="article__picture"
-        :src="`${api_url}${post.thumbnail.url}`"
+        :src="`${post.thumbnail.url}`"
         :alt="post.thumbnail.alternativeText"
         srcset=""
       />
@@ -13,7 +13,7 @@
         <img
           v-if="post.logo !== null"
           class="article__logo"
-          :src="`${api_url}${post.logo.url}`"
+          :src="`${post.logo.url}`"
           :alt="post.logo.alternativeText"
         />
         <h4 v-if="post.type !== null" class="article__type">{{ post.type }}</h4>

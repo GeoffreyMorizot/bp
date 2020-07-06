@@ -6,7 +6,7 @@ query Footer {
       ... on ComponentDefaultSocials{
         socials{
           link
-          icon:Icon{
+          Icon{
             name
             url
           }

@@ -3,7 +3,7 @@ query Socials{
         id
     link
     name
-    icon{
+    Icon{
       url
       
     }
