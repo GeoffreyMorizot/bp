@@ -14,7 +14,7 @@
     </div>
     <div class="post__description">
       <h3>
-        {{ post.posts[0].title }} - <span>{{ post.posts[0].type }}</span>
+        {{ post.posts[0].Title }} - <span>{{ post.posts[0].type }}</span>
       </h3>
       <ul>
         <li>
@@ -35,7 +35,7 @@
             {{ director.Name }}
           </span>
         </li>
-        <li>Cinematographer: {{ post.posts[0].cinematographer }}</li>
+        <li>Cinematographer: {{ post.posts[0].Cinematographer }}</li>
       </ul>
     </div>
     <div class="embed-container">

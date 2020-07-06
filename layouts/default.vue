@@ -140,6 +140,8 @@ p {
   }
 }
 .navigation__links {
+  display: flex;
+  flex-direction: row;
   @include mobile {
     display: none;
     display: flex;
