@@ -40,7 +40,10 @@
     <section class="awards">
       <div class="about__awards">
         <h2>AWARDS</h2>
-        <img :src="`${about.awards.url}`" alt="" />
+
+        <div v-if="$apollo.loading == 0">
+          <img :src="`${about.awards.url}`" alt="" />
+        </div>
         <div class="bg"></div>
       </div>
     </section>
